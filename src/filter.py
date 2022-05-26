@@ -7,8 +7,7 @@ def num(c):
     if len(c) == 0:
         c.append("_")
 
-print("안녕하세요")
-# print(cmp(Lot_id,Wafer_id,xy_coord,Mask_set,device_name))
+
 
 #wafer리스트
 wafer = []
@@ -38,7 +37,8 @@ search(h,wafer)
 
 # wafer리스트 각 요소들의 하위 디렉터리를 찾아 date디렉토리에 append
 for i in range(len(wafer)):
-    search(wafer[i],date)
+    if not ".gitkeep" in wafer[i]:
+        search(wafer[i],date)
 
 
 fname = []
